@@ -1,0 +1,36 @@
+apiVersion: api.sushilbhile.dev/v1alpha1
+kind: Scaler
+metadata:
+  labels:
+    app.kubernetes.io/name: scaler
+    app.kubernetes.io/instance: scaler-sample
+    app.kubernetes.io/part-of: k8s-cr
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: k8s-cr
+  name: scaler-sample
+spec:
+  start: 0
+  end: 30
+  replicas: 10
+  deployments:
+  - name: mongodb
+    namespace: spektra-tenant-project-proj1
+
+# ---
+# apiVersion: api.sushilbhile.dev/v1alpha1
+# kind: Scaler
+# metadata:
+#   labels:
+#     app.kubernetes.io/name: scaler
+#     app.kubernetes.io/instance: scaler-sample
+#     app.kubernetes.io/part-of: k8s-cr
+#     app.kubernetes.io/managed-by: kustomize
+#     app.kubernetes.io/created-by: k8s-cr
+#   name: scaler-sample2
+# spec:
+#   start: 30
+#   end: 59
+#   replicas: 3
+#   deployments:
+#   - name: mongodb
+#     namespace: spektra-tenant-project-proj1
