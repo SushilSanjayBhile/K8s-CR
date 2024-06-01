@@ -27,6 +27,6 @@ make run
 
 ## Regenerate CRDs
 
-To regenerate CRDs when we make changes in types.go run following commands:
+To regenerate CRDs when we make changes in api/v1alpha1/*types.go run following commands:
 
 make manifests; make run
